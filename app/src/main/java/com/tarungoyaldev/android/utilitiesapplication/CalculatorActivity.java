@@ -180,9 +180,9 @@ public class CalculatorActivity extends AppCompatActivity {
         currentOperation = Operation.valueOf(calculationStack.peek());
         if (operation.equals(Operation.EQUAL)) {
             while (!calculationStack.peek().equals(Operation.NULL.name())) {
-                Float currentValue = Float.valueOf(displayStringObserver.getObservedString());
+                Double currentValue = Double.valueOf(displayStringObserver.getObservedString());
                 Operation prevOperation = Operation.valueOf(calculationStack.pop());
-                float prevValue = Float.valueOf(calculationStack.pop());
+                double prevValue = Double.valueOf(calculationStack.pop());
                 displayStringObserver.updateString(
                         String.valueOf(operate(prevOperation,prevValue,currentValue)));
             }
@@ -197,9 +197,9 @@ public class CalculatorActivity extends AppCompatActivity {
                 calculationStack.push(Operation.NULL.name());
             }
         } else {
-            float displayValue = Float.valueOf(displayStringObserver.getObservedString());
+            double displayValue = Double.valueOf(displayStringObserver.getObservedString());
             Operation previousOperation = Operation.valueOf(calculationStack.pop());
-            float previousValue = Float.valueOf(calculationStack.pop());
+            double previousValue = Double.valueOf(calculationStack.pop());
             String newValue =
                     String.valueOf(operate(previousOperation, previousValue, displayValue));
             if (newValue.endsWith(".0")) {
@@ -210,8 +210,8 @@ public class CalculatorActivity extends AppCompatActivity {
         }
     }
 
-    private String operate(Operation operation, float firstValue, float secondValue) {
-        float result;
+    private String operate(Operation operation, double firstValue, double secondValue) {
+        double result;
         switch (operation) {
             case ADDITION:
                 result = firstValue + secondValue;
@@ -258,7 +258,7 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
                     break;
                 case R.id.percentageButton:
-                    float textValue = Float.valueOf(displayString);
+                    double textValue = Double.valueOf(displayString);
                     textValue/=100;
                     String resultString = String.valueOf(textValue);
                     if (resultString.endsWith(".0")) {
