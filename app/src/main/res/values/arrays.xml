@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="distances_names">
+        <item>mm</item>
+        <item>cm</item>
+        <item>dm</item>
+        <item>m</item>
+        <item>km</item>
+        <item>in</item>
+        <item>ft</item>
+        <item>yd</item>
+        <item>mi</item>
+        <item>nmi</item>
+        <item>ly</item>
+    </string-array>
+    <string-array name="distances_values">
+        <item>1</item>
+        <item>0.1</item>
+        <item>0.01</item>
+        <item>0.001</item>
+        <item>1E-6</item>
+        <item>0.039370079</item>
+        <item>0.00328084</item>
+        <item>0.001093613</item>
+        <item>6.2137119E-7</item>
+        <item>5.399568E-7</item>
+        <item>1.057023E-19</item>
+    </string-array>
+    <string-array name="mass_names">
+        <item>kg</item>
+        <item>g</item>
+        <item>mg</item>
+        <item>µg</item>
+        <item>lb</item>
+        <item>oz</item>
+    </string-array>
+    <string-array name="mass_vales">
+        <item>.001</item>
+        <item>1</item>
+        <item>1000</item>
+        <item>1000000</item>
+        <item>.0022</item>
+        <item>0.03527</item>
+    </string-array>
+
+</resources>

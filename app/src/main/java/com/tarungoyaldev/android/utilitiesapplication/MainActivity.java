@@ -23,8 +23,12 @@ public class MainActivity extends AppCompatActivity {
         if (view instanceof Button) {
             int viewId = view.getId();
             switch (viewId) {
-                case R.id.calculatorButton :
+                case R.id.calculatorButton:
                     Intent intent = new Intent(this, CalculatorActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.unitConverterButton:
+                    intent = new Intent(this, UnitConverterActivity.class);
                     startActivity(intent);
                     break;
             }

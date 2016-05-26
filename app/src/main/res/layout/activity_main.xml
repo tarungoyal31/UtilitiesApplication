@@ -9,24 +9,31 @@
     tools:context="com.tarungoyaldev.android.utilitiesapplication.MainActivity"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:title="@string/app_name"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    <Button
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/listOrange"
-        android:layout_margin="0dp"
+        android:paddingTop="0dp"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        style="@style/mainActivity_listButton"
         android:text="Calculator"
-        android:id="@+id/calculatorButton"
-        android:padding="8dp"
-        android:textSize="18sp"
-        android:onClick="onClick"/>
+        android:id="@+id/calculatorButton" />
+
+    <Button
+        style="@style/mainActivity_listButton"
+        android:text="Unit Converter"
+        android:id="@+id/unitConverterButton" />
 </LinearLayout>
